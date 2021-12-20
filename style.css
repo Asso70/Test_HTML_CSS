@@ -1,18 +1,81 @@
+:root {
+    --lato-bottone: 55px;
+}
+
 body {
     display: flex;
+    margin: 0px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 98vh;
+    align-items: center;
+    background-color: #C4C4C4;
+}
+
+@media screen and (max-width: 576px) {
+    aside {
+        display: none;
+    }
 }
 
 div.rettangolo {
-    width: 
+    width: 80%;
+    height: 5rem;
+    background-color: #EEEEEE;
+    margin-top: 30px;
 }
 
 main {
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    height: 100vh;
 }
+
+main header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    background-color: #F8F4F4;
+    padding: 10px 30px;
+}
+
+input {
+    background-color: #C4C4C4;
+    border-style: hidden;
+    height: var(--lato-bottone);
+}
+
+main header input {
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+input#cerca {
+    padding-left: 10px;
+}
+
+input#dh {
+    font-weight: 1000;
+}
+
+input[type="button"] {
+    width: var(--lato-bottone);
+}   
 
 section {
     display: flex;
     flex-direction: row-reverse;
+    flex-grow: 1;
+    align-items: flex-end;
+    padding: 10px 30px;
 }
 
+input#tondo {
+    border-radius: var(--lato-bottone);
+}
